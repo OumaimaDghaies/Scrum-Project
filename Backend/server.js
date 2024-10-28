@@ -5,6 +5,8 @@ const cors = require("cors");
 const app = express();
 const users = require("./routes/api/users");
 const auth = require("./routes/api/auth");
+const patientsRoute = require("./routes/api/patient");
+
 /*const personnels = require("./routes/api/personnels");
 const cars = require("./routes/api/cars");
 
@@ -22,6 +24,7 @@ mongoose
 .catch((err) =>console.log(err));
 app.use("/api/users",users);
 app.use("/api/auth",auth);
+app.use("/api/patients", patientsRoute);
 /*app.use("/api/personnels",personnels);
 app.use("/api/cars",cars);
 app.use("/api/rdvsadmin",rdvsadmin);
